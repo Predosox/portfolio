@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ tipo }} em {{ municipio }} ({{ mes }})</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Preços de {{ tipo }} em {{ municipio }} ({{ mes }})</h1>
+        <img src="data:image/png;base64,{{ graph_url }}" alt="Gráfico de preços">
+        <a href="/cidade/{{ tipo }}/{{ municipio }}" class="voltar">Voltar</a>
+    </div>
+</body>
+</html>

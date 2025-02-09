@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha um Mês</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Escolha um mês para visualizar os preços de {{ tipo }} em {{ municipio }}</h1>
+        <ul>
+            {% for mes in meses %}
+                <li><a href="/cidade/{{ tipo }}/{{ municipio }}/{{ mes }}">{{ mes }}</a></li>
+            {% endfor %}
+        </ul>
+        <a href="/combustivel/{{ tipo }}" class="voltar">Voltar</a>
+    </div>
+</body>
+</html>
