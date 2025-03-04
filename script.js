@@ -1,12 +1,17 @@
-// Você pode adicionar interatividade aqui, como animações ou manipulação de DOM.
-// Por exemplo, um efeito de scroll suave para as seções.
+function mostrarProjetos(tipo) {
+    let projetosGrandes = document.getElementById("projetos-grandes");
+    let projetosMenores = document.getElementById("projetos-menores");
+    let botoes = document.querySelectorAll(".aba");
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+    if (tipo === "grandes") {
+        projetosGrandes.style.display = "block";
+        projetosMenores.style.display = "none";
+    } else if (tipo === "menores") {
+        projetosGrandes.style.display = "none";
+        projetosMenores.style.display = "block";
+    }
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+    
+    botoes.forEach(botao => botao.classList.remove("ativa"));
+    document.querySelector(`button[onclick="mostrarProjetos('${tipo}')"]`).classList.add("ativa");
+}

@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio - Arthur Pedroso</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -17,30 +18,46 @@
     <section id="sobre">
         <div class="container">
             <h2>Sobre Mim</h2>
-            <p>Olá! Meu nome é Arthur, um desenvolvedor back-end com experiência em Python, SQL e Java. Aqui você pode ver alguns dos meus projetos e saber mais sobre o meu trabalho.</p>
+            <p>Olá! Meu nome é Arthur, um desenvolvedor back-end com experiência em Python e SQL. Aqui você pode ver alguns dos meus projetos e saber mais sobre o meu trabalho.</p>
         </div>
     </section>
 
     <section id="projetos">
         <div class="container">
             <h2>Projetos</h2>
-            <div class="projetos-grid">
-
-                <!-- Projeto 1 -->
-                <div class="projeto">
-                    <h3>Projeto 1</h3>
-                    <p>Este projeto possibilita a visualização de uma planilha com mais de 400 mil linhas por meio de gráficos simples e intuitivos, facilitando a análise e interpretação dos dados. Para o desenvolvimento, foram utilizadas as seguintes tecnologias: Python para a lógica de programação, Pandas para manipulação e tratamento dos dados, Matplotlib para a criação dos gráficos e Flask para a construção da interface web.</p>
-                    
-                    <!-- Vídeo local -->
-                    <video width="100%" controls>
-                        <source src="Projeto_1_(Combustiveis)\videos_projeto\Projeto1.mp4" type="video/mp4">
-                        Seu navegador não suporta a tag de vídeo.
-                    </video>
-                
-                    <a href="#" class="btn">Ver Projeto</a>
-                </div>
-                
+            
+            
+            <div class="abas">
+                <button class="aba ativa" onclick="mostrarProjetos('grandes')">Projetos Grandes</button>
+                <button class="aba" onclick="mostrarProjetos('menores')">Projetos Menores</button>
             </div>
+
+            <!-- Projetos Grandes -->
+            <div id="projetos-grandes" class="projetos-grid">
+                <div class="projeto">
+                    <h3>Controle de Fluxo</h3>
+                    <p>Este projeto tem como objetivo proporcionar ao setor PCP de uma empresa um maior controle sobre os demais setores...</p>
+                    
+                    
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/I1ruOqoPauU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                
+                    <a href="https://github.com/Predosox/Controle_Fluxo.git" class="btn">GitHub</a>
+                </div>
+            </div>
+
+            <!-- Projetos Menores -->
+            <div id="projetos-menores" class="projetos-grid oculto">
+                <div class="projeto">
+                    <h3>Análise de Combustíveis</h3>
+                    <p>Este projeto possibilita a visualização de uma planilha com mais de 400 mil linhas por meio de gráficos simples e intuitivos...</p>
+                    
+                    
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/uqw_IsGwMbU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                
+                    <a href="https://github.com/Predosox/Analise_Combs.git" class="btn">GitHub</a>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -49,16 +66,21 @@
             <h2>Contato</h2>
             <p>Se você quiser entrar em contato comigo, sinta-se à vontade para me enviar um e-mail ou me encontrar nas redes sociais.</p>
             <ul class="social-links">
-                <li><a href="arthuralmeidapedroso3@gmail.com">Email</a></li>
-                <li><a href="https://github.com/Predosox" target="_blank">GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/arthur-almeida-pedroso-133a8a285/" target="_blank">LinkedIn</a></li>
+                <li>
+                    <a href="mailto:arthuralmeidapedroso3@gmail.com">
+                        <i class="fas fa-envelope"></i> 
+                         
+                    </a>
+                </li>
+                <li><a href="https://github.com/Predosox" target="_blank"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/arthur-almeida-pedroso-133a8a285/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
             </ul>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2023 Arthur Almeida Pedroso. Todos os direitos reservados.</p>
+            <p>&copy; 2025 Arthur Almeida Pedroso. Todos os direitos reservados.</p>
         </div>
     </footer>
 
